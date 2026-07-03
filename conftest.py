@@ -72,16 +72,3 @@ def pytest_html_results_table_header(cells):
 def pytest_html_results_table_row(report, cells):
     """Rellena la fila correspondiente con la URL del sitio al momento del test."""
     cells.insert(2, getattr(report, 'page_url', '-'))
-    
-@pytest.fixture
-def driver():
-    chrome_options = Options()
-    # Si estamos en GitHub Actions, activar headless
-    if os.getenv('GITHUB_ACTIONS'):
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-    
-    driver = webdriver.Chrome(options=chrome_options)
-    yield driver
-    driver.quit()
