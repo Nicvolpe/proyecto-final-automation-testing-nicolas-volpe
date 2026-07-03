@@ -14,5 +14,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run Tests
-        # CAMBIA 'py' POR 'python' AQUÍ:
+        # CAMBIAR 'py' POR 'python' ACÁ PARA QUE FUNCIONE:
         run: python -m pytest tests/ tests_api/ -v
+      - name: Run BDD tests
+        run: python -m behave
