@@ -17,3 +17,13 @@ Framework de automatización de pruebas para el sitio SauceDemo y APIs de JSONPl
 ## Ejecución de pruebas
 - Ejecutar tests UI y API: `py -m pytest -v`
 - Ejecutar tests BDD: `py -m behave`
+
+## Resultados de Ejecución
+
+Aquí puedes ver la evidencia de que las pruebas fueron ejecutadas con éxito:
+
+### Ejecución de Pruebas UI y API
+![Resultado de Pytest](assets/pytest.png)
+
+### Ejecución de Pruebas BDD
+![Resultado de Behave](assets/behave.png)
